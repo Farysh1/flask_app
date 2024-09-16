@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Control Panel</h2>
+<form method="POST">
+    <label>Select Page to Display:</label><br>
+    <select name="page">
+        <option value="page1" {% if current_page=='page1' %}selected{% endif %}>Page 1: Earth's Tilt</option>
+        <option value="page2" {% if current_page=='page2' %}selected{% endif %}>Page 2: Sun's Rays</option>
+    </select><br><br>
+    <input type="submit" value="Update Page">
+</form>
+{% endblock %}
